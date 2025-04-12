@@ -4,13 +4,13 @@ export const Person = ({ person }) => {
   let partnerInfo;
 
   if (partnerName && isMarried) {
-    partnerInfo =
-      // eslint-disable-next-line no-nested-ternary
-      sex === 'm'
-        ? `My wife is ${partnerName}`
-        : sex === 'f'
-          ? `My husband is ${partnerName}`
-          : null;
+    if (sex === 'm') {
+      partnerInfo = `My wife is ${partnerName}`;
+    } else if (sex === 'f') {
+      partnerInfo = `My husband is ${partnerName}`;
+    } else {
+      partnerInfo = null;
+    }
   } else {
     partnerInfo = 'I am not married';
   }
