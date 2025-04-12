@@ -6,10 +6,10 @@ export const Person = ({ person }) => {
   if (partnerName && isMarried) {
     partnerInfo =
       // eslint-disable-next-line no-nested-ternary
-      sex === 'f'
-        ? `My husband is ${partnerName}`
-        : sex === 'm'
-          ? `My wife is ${partnerName}`
+      sex === 'm'
+        ? `My wife is ${partnerName}`
+        : sex === 'f'
+          ? `My husband is ${partnerName}`
           : null;
   } else {
     partnerInfo = 'I am not married';
